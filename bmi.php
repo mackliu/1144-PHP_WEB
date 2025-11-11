@@ -40,7 +40,7 @@
 </head>
 <body>
     <h1>BMI 計算器</h1>
-    <form method="POST" action="bmi_result.php">
+    <form method="GET" action="bmi_result.php">
         <div class="form-group">
             <label for="height">身高 (公分):</label>
             <input type="number" id="height" name="height" step="0.1" required>
