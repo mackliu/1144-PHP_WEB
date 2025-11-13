@@ -1,6 +1,9 @@
 <?php
-$showForm = !isset($_GET['chk']) || $_GET['chk'] !== '1';
+session_start();
+//echo $_SESSION['login'];
+$showForm = !(isset($_SESSION['login']) && $_SESSION['login'] == '1');
 
+echo $showForm;
 ?>
 <!doctype html>
 <html lang="zh-Hant">

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $method = $_SERVER['REQUEST_METHOD'];
 $username = isset($_POST['username']) ? trim($_POST['username']) : null;
 $password = isset($_POST['password']) ? $_POST['password'] : null;
@@ -10,9 +10,11 @@ if ($method === 'POST') {
     if ($username === 'admin' && $password === '123456') {
         $chk = true;
         $message = '登入成功，歡迎回來！';
+        $_SESSION['login'] = 1;
     } else {
         $chk = false;
         $message = '帳號或密碼錯誤，請重新嘗試。';
+        $_SESSION['login'] = 0;
     }
 } else {
     $message = '請由登入表單提交帳密。';
@@ -62,7 +64,7 @@ if ($method === 'POST') {
             <?php endif; ?>
 
             <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
-                <a class="ghost" href="login.php?chk=<?= $chk; ?> ">回到登入頁面</a>
+                <a class="ghost" href="login.php">回到登入頁面</a>
                 <?php if ($chk) { ?>
                     <form method="post" action="" style="margin:0">
                         <button class="btn" type="button" onclick="location.href='login.php'">繼續</button>
