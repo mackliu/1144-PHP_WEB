@@ -2,7 +2,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>TechFlow Solutions</h3>
-                    <p>專業提供企業數位轉型與科技解決方案，幫助企業邁向未來。</p>
+                    <p>專業提供企業數位轉型與科技解決方案，幫助企業邁向未來。 <?=$_GET['pos'];?></p>
                 </div>
                 
                 <div class="footer-section">
