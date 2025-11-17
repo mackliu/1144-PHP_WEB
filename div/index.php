@@ -21,23 +21,7 @@
                 </div>
                 
                 <!-- 導覽列 -->
-                <nav class="navbar">
-                    <a href="index.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) === 'index.php') ? 'active' : ''; ?>">
-                        首頁
-                    </a>
-                    <a href="news.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) === 'about.php') ? 'active' : ''; ?>">
-                        最新消息
-                    </a>
-                    <a href="about.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) === 'about.php') ? 'active' : ''; ?>">
-                        關於我們
-                    </a>
-                    <a href="services.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) === 'services.php') ? 'active' : ''; ?>">
-                        服務介紹
-                    </a>
-                    <a href="contact.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) === 'contact.php') ? 'active' : ''; ?>">
-                        聯絡我們
-                    </a>
-                </nav>
+                <?php include "navbar.php";?>
             </div>
         </header>
 
