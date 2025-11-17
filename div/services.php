@@ -10,7 +10,7 @@
 <body>
     <div class="page-container">
         <!-- 頁首 -->
-<?php include "header.php";?>
+<?php $pos=explode(".",basename(__FILE__))[0] ;  include "header.php";?>
 
         <!-- 主要內容區 -->
         <main class="main-content">
