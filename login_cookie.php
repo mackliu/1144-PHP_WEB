@@ -1,7 +1,7 @@
 <?php
-session_start();
+date_default_timezone_set("Asia/Taipei");
 //echo $_SESSION['login'];
-$showForm = !(isset($_SESSION['login']) && $_SESSION['login'] == '1');
+$showForm = !(isset($_COOKIE['login']) && $_COOKIE['login'] == '1');
 
 echo $showForm;
 ?>
@@ -28,8 +28,8 @@ echo $showForm;
                     </svg>
                 </div>
                 <div>
-                    <h1>MyApp</h1>
-                    <p>專屬會員入口-SESSION</p>
+                    <h1>MyApp-<?=date("Y-m-d H:i:s");?></h1>
+                    <p>專屬會員入口-COOKIE</p>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ echo $showForm;
                 <h2 id="login-title">會員登入</h2>
                 <p class="lead">請使用您的帳號登入，如需協助請聯絡客服。</p>
 
-                <form action="chk_login.php" method="post" autocomplete="on" novalidate>
+                <form action="chk_login_cookie.php" method="post" autocomplete="on" novalidate>
                     <div class="field">
                         <label for="username">帳號 / 電子郵件</label>
                         <div class="input">
