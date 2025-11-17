@@ -1,3 +1,4 @@
+
 <?php
 if (isset($_GET['height']) && isset($_GET['weight'])) {
     $height = (float)$_GET['height'];
@@ -18,7 +19,7 @@ if (isset($_GET['height']) && isset($_GET['weight'])) {
         }
         
         echo "<!DOCTYPE html>";
-        echo "<html><head><meta charset='UTF-8'><title>BMI結果</title></head><body>";
+        echo "<html><head><meta charset='UTF-8'><title>BMI結果</title><link rel='stylesheet' href='style.css'></head><body>";
         echo "<h2>BMI計算結果</h2>";
         echo "<p>你的身高：" . htmlspecialchars($height) . " cm</p>";
         echo "<p>你的體重：" . htmlspecialchars($weight) . " kg</p>";
